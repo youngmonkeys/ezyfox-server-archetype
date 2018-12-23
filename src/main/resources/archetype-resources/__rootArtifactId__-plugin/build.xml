@@ -1,0 +1,22 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="${parentArtifactId}-plugin" default="install" basedir=".">
+	<import file="../build.xml" />
+
+	<target name="install">
+		<delete dir="${symbol_dollar}{ezyfox.home.plugins}/${symbol_dollar}{project.name}" />
+		<mkdir dir="${symbol_dollar}{ezyfox.home.plugins}/${symbol_dollar}{project.name}"/>
+		<mkdir dir="${symbol_dollar}{ezyfox.home.plugins}/${symbol_dollar}{project.name}/config"/>
+		<copy todir="${symbol_dollar}{ezyfox.home.plugins}/${symbol_dollar}{project.name}">
+			<fileset dir="target">
+				<filename name="${symbol_dollar}{project.name}-${symbol_dollar}{project.version}.jar" />
+			</fileset>
+		</copy>
+		<copy todir="${symbol_dollar}{ezyfox.home.plugins}/${symbol_dollar}{project.name}/config">
+			<fileset dir="config" />
+		</copy>	
+	</target>
+
+</project>
