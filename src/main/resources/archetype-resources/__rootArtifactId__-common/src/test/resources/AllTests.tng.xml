@@ -1,0 +1,13 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All-Test">
+
+    <test name="All">
+    	<packages>
+    		<package name="${package}.common.test"/>
+    	</packages>
+    </test>
+</suite>
