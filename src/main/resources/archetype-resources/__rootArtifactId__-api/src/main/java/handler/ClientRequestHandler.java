@@ -35,7 +35,19 @@ public abstract class ClientRequestHandler
 	
 	@Override
 	public final void handle() {
+		postInit();
+		preHandle();
 		execute();
+		postHandle();
+	}
+	
+	protected void postInit() {
+	}
+	
+	protected void preHandle() {
+	}
+	
+	protected void postHandle() {
 	}
 	
 	protected abstract void execute() throws EzyBadRequestException;
