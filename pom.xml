@@ -33,7 +33,7 @@
     </pluginManagement>
   </build>
 
-  <description>Common maven project configuration</description>
+  <description>An archetype which contains an ezyfox-server sample.</description>
 
   <url>http://maven.apache.org</url>
 
