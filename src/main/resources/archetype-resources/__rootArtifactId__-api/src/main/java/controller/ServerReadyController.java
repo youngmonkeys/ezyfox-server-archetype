@@ -18,7 +18,7 @@ public class ServerReadyController
 
 	@Override
 	public void handle(EzyAppContext ctx, EzyServerReadyEvent event) {
-		getLogger().info("${parentArtifactId} app: fire custom app ready");
+		logger.info("${parentArtifactId} app: fire custom app ready");
 	}
 	
 }

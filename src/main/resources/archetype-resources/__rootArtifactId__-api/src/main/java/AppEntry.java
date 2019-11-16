@@ -32,7 +32,7 @@ public class AppEntry extends EzySimpleAppEntry {
 	}
 	
 	public void start() throws Exception {
-		getLogger().info("start ${parentArtifactId} app");
+		logger.info("start ${parentArtifactId} app");
 	}
 
 	@Override

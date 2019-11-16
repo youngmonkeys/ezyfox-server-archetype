@@ -18,7 +18,7 @@ public class ServerReadyController
 
 	@Override
 	public void handle(EzyPluginContext ctx, EzyServerReadyEvent event) {
-		getLogger().info("freechat plugin: fire custom app ready");
+		logger.info("freechat plugin: fire custom app ready");
 	}
 	
 }
