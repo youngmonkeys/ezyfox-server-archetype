@@ -9,11 +9,15 @@
 	<artifactId>${artifactId}</artifactId>
 	<name>${artifactId}</name>
 	
+	<properties>
+		<ezy.server.support.version>1.1.0</ezy.server.support.version>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.tvd12</groupId>
 			<artifactId>ezyfox-server-support</artifactId>
-			<version>1.0.1</version>
+			<version>${ezy.server.support.version}</version>
 		</dependency>
 	</dependencies>
 	
