@@ -14,13 +14,14 @@
       <includes>
         <include>build.xml</include>
         <include>.project</include>
+        <include>build.sh</include>
+        <include>README.md</include>
         <include>__rootArtifactId__-zone-settings.xml</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>README.md</include>
         <include>.gitignore</include>
       </includes>
     </fileSet>

@@ -5,19 +5,19 @@
 
 	<groupId>com.tvd12</groupId>
 	<artifactId>ezyfox-server-archetype</artifactId>
-	<version>1.1.6</version>
+	<version>1.1.2</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>ezyfox-server-archetype</name>
 
-	<url>http://www.tvd12.com/java/projects/ezyfox-server-archetype</url>
+	<url>https://youngmonkeys.org/project/ezyfox-sever/</url>
 	<description>
 		An archetype which contains an ezyfox-server sample 
 	</description>
 
 	<organization>
 		<name>Young Monkeys</name>
-		<url>http://www.tvd12.com</url>
+		<url>https://youngmonkeys.org/</url>
 	</organization>
 
 	<properties>
@@ -39,7 +39,7 @@
 			<name>Ta Van Dung</name>
 			<email>itprono3@gmail.com</email>
 			<organization>Young Monkeys</organization>
-			<organizationUrl>http://www.tvd12.com</organizationUrl>
+			<organizationUrl>https://youngmonkeys.org/</organizationUrl>
 		</developer>
 	</developers>
 
