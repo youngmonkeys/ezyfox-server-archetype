@@ -41,19 +41,10 @@ public class AppEntry extends EzyDefaultAppEntry {
 	}
 	
 	@Override
-	protected String[] getScanableBeanPackages() {
+	protected String[] getScanablePackages() {
 		return new String[] {
 				"${package}.common",
 				"${package}.app"
 		};
 	}
-	
-	@Override
-	protected String[] getScanableBindingPackages() {
-		return new String[] {
-			"${package}.common",
-			"${package}.app"
-		};
-	}
-
 }

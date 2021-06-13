@@ -47,7 +47,7 @@ public class PluginEntry extends EzyDefaultPluginEntry {
 	}
 	
 	@Override
-	protected String[] getScanableBeanPackages() {
+	protected String[] getScanablePackages() {
 		return new String[] {
 			"${package}.common",
 			"${package}.plugin"
