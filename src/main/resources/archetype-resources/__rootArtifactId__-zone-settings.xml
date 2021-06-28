@@ -22,7 +22,7 @@
 	<applications>
         <application>
 			<name>${artifactId}</name>
-			<folder>${artifactId}-app</folder>
+			<folder>${artifactId}-app-entry</folder>
 			<entry-loader>${package}.app.AppEntryLoader</entry-loader>
 			<config-file>config/config.properties</config-file>
 		</application>
