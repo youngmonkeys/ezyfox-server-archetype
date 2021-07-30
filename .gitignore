@@ -7,3 +7,5 @@
 */.classpath
 */.setting/
 */test-output/
+.idea/*
+ezyfox-server-archetype.iml
