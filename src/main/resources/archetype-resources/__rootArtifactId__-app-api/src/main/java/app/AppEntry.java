@@ -33,6 +33,8 @@ public class AppEntry extends EzyDefaultAppEntry {
 		builder.addProperties("${parentArtifactId}-common-config.properties");
 		builder.addProperties(pluginProperties);
 		builder.addProperties(getConfigFile(setting));
+		// The line below will be removed when ezyfox-server is updated to version 1.2.0
+		builder.scan(getScanablePackages());
 		Properties properties = builder.getProperties();
 	}
 	

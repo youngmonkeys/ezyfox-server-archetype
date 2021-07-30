@@ -38,6 +38,8 @@ public class PluginEntry extends EzyDefaultPluginEntry {
 		builder.addProperties("${parentArtifactId}-common-config.properties");
 		builder.addProperties(getConfigFile(setting));
 		Properties properties = builder.getProperties();
+		// The line below will be removed when ezyfox-server is updated to version 1.2.0
+		builder.scan(getScanablePackages());
 		EzyZoneContext zoneContext = context.getParent();
 		zoneContext.setProperty(CommonConstants.PLUGIN_PROPERTIES, properties);
 	}
