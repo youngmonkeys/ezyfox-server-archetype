@@ -34,7 +34,7 @@ To run by `ezyfox-server` you need follow by steps:
 1. Download [ezyfox-sever](https://resources.tvd12.com/)
 2. Setup `EZYFOX_SERVER_HOME` environment variable: let's say you place `ezyfox-server` at `/Programs/ezyfox-server` so `EZYFOX_SERVER_HOME = /Programs/ezyfox-server`
 3. Run `build.sh` file on your terminal
-4. Copy `${artifactId}-zone-settings.xml` to `EZYFOX_SERVER_HOME/settings/zones` folder
+4. Copy `${artifactId}-zone-settings.xml` to `EZYFOX_SERVER_HOME/settings/zones` folder if you did not run `build.sh`
 5. Open file `EZYFOX_SERVER_HOME/settings/ezy-settings.xml` and add to `<zones>` tag:
 ```xml
     <zone>
