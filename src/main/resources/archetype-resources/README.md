@@ -34,8 +34,7 @@ To run by `ezyfox-server` you need follow by steps:
 1. Download [ezyfox-sever](https://resources.tvd12.com/)
 2. Setup `EZYFOX_SERVER_HOME` environment variable: let's say you place `ezyfox-server` at `/Programs/ezyfox-server` so `EZYFOX_SERVER_HOME = /Programs/ezyfox-server`
 3. Run `build.sh` file on your terminal
-4. Copy `${artifactId}-zone-settings.xml` to `EZYFOX_SERVER_HOME/settings/zones` folder if you did not run `build.sh`
-5. Open file `EZYFOX_SERVER_HOME/settings/ezy-settings.xml` and add to `<zones>` tag:
+4. Open file `EZYFOX_SERVER_HOME/settings/ezy-settings.xml` and add to `<zones>` tag:
 ```xml
     <zone>
 		<name>${artifactId}</name>
@@ -43,7 +42,7 @@ To run by `ezyfox-server` you need follow by steps:
 		<active>true</active>
 	</zone>
 ```
-6. Run `console.sh` in `EZYFOX_SERVER_HOME` on your termial, if you want to run `ezyfox-server` in backgroud you will need run `start-server.sh` on your terminal
+5. Run `console.sh` in `EZYFOX_SERVER_HOME` on your termial, if you want to run `ezyfox-server` in backgroud you will need run `start-server.sh` on your terminal
 
 # Deploy mapping
 Modules after will deploy to `ezyfox-server` will be mapped like this:
