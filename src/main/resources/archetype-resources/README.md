@@ -38,7 +38,7 @@ ${symbol_pound}${symbol_pound} Run by ezyfox-server
 
 To run by `ezyfox-server` you need follow by steps:
 1. Download [ezyfox-sever](https://resources.tvd12.com/) (standard version for IoT and full version for normal server)
-2. Setup `EZYFOX_SERVER_HOME` environment variable: let's say you place `ezyfox-server` at `/Programs/ezyfox-server` so `EZYFOX_SERVER_HOME = /Programs/ezyfox-server`
+2. Open `build.sh` file and set `EZYFOX_SERVER_HOME` variable, let's say you place `ezyfox-server` at `/Programs/ezyfox-server` so `EZYFOX_SERVER_HOME=/Programs/ezyfox-server`
 3. Run `build.sh` file on your terminal
 4. Open file `EZYFOX_SERVER_HOME/settings/ezy-settings.xml` and add to `<zones>` tag:
 
