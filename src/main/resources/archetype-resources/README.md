@@ -11,22 +11,21 @@ ${symbol_pound} Require
 
 ${symbol_pound} Description
 
-1. ${artifactId}-app-api: contains app's request controller, app's event handler and which components just related to app
-2. ${artifactId}-app-entry: contains `AppEntryLoader` class, you should not add classes here
+1. ${artifactId}-app-api: contains app's request controllers, app's event handlers and components that are related to app
+2. ${artifactId}-app-entry: contains AppEntryLoader class (you should not add any classes in this module)
 3. ${artifactId}-app-entry/config/config.properties: app's configuration file
-4. ${artifactId}-common: contains components that use by both app and plugin
-5. ${artifactId}-plugin: contains plugin's event handler, plugin's request controller and which components just related to plugin. You will need handle `USER_LOGIN` event here
+4. ${artifactId}-common: contains components that are used by both app and plugin
+5. ${artifactId}-plugin: contains plugin's event handlers, plugin's request controllers and components that are related to plugin. You will need handle `USER_LOGIN` event here
 6. ${artifactId}-plugin/config/config.properties: plugin's configuration file
-7. ${artifactId}-startup: contains `ApplicationStartup` class to run on local, you should not add classes here
+7. ${artifactId}-startup: contains ApplicationStartup class to run on local (you should not add any classes in this module)
 8. ${artifactId}-startup/src/main/resources/log4j.properties: log4j configuration file
 
 ${symbol_pound} How to build?
 
 You can build by:
 
-1. Your IDE
-2. Run `mvn clean install` on your terminal
-3. Open `build.sh` file and set `EZYFOX_SERVER_HOME` by your `ezyfox-server` folder path and run `bash build.sh` file on your terminal
+1. Running `mvn clean install` on your terminal
+2. Opening `build.sh` file and set `EZYFOX_SERVER_HOME` by your `ezyfox-server` folder path and run `bash build.sh` file on your terminal
 
 ${symbol_pound} How to run?
 
@@ -36,8 +35,8 @@ You just move to `${artifactId}-startup` module and run `ApplicationStartup`
 
 ${symbol_pound}${symbol_pound} Run by ezyfox-server
 
-To run by `ezyfox-server` you need follow by steps:
-1. Download [ezyfox-sever](https://resources.tvd12.com/) (standard version for IoT and full version for normal server)
+To run by `ezyfox-server` you need to follow by steps:
+1. Download [ezyfox-sever](https://resources.tvd12.com/) (the standard version is for IoT servers and the full version is for normal servers)
 2. Open `build.sh` file and set `EZYFOX_SERVER_HOME` variable, let's say you place `ezyfox-server` at `/Programs/ezyfox-server` so `EZYFOX_SERVER_HOME=/Programs/ezyfox-server`
 3. Run `build.sh` file on your terminal
 4. Open file `EZYFOX_SERVER_HOME/settings/ezy-settings.xml` and add to `<zones>` tag:
@@ -50,7 +49,7 @@ To run by `ezyfox-server` you need follow by steps:
 </zone>
 ```
 
-5. Run `console.sh` in `EZYFOX_SERVER_HOME` on your termial, if you want to run `ezyfox-server` in backgroud you will need run `start-server.sh` on your terminal
+5. Run `console.sh` in `EZYFOX_SERVER_HOME` on your terminal, if you want to run `ezyfox-server` in backgroud you will need to run `start-server.sh` on your terminal
 
 ${symbol_pound}${symbol_pound} Run without ezyfox-server
 
@@ -77,7 +76,7 @@ ${symbol_pound} How to deploy?
 
 ${symbol_pound}${symbol_pound} Deploy mapping
 
-Modules after will deploy to `ezyfox-server` will be mapped like this:
+Modules which are deployed to ezyfox-server will be mapped as follows::
 
 1. ${artifactId}-app-api => `ezyfox-server/apps/common/${artifactId}-app-api-${version}.jar`
 2. ${artifactId}-app-entry => `ezyfox-server/apps/entries/${artifactId}-app`
@@ -97,7 +96,7 @@ We've already prepared for you `deploy.sh` file, you just need:
 
 1. Open `deploy.sh` file
 2. Set `ezyfoxServerLocal` by your `ezyfox-server` folder path on local
-3. Set `ezyfoxRemote` by your `ezyfox-server` folder path on remote
+3. Set `ezyfoxServerRemote` by your `ezyfox-server` folder path on remote
 4. Set `sshCredential` by your ssh credential, i.e `root@your_host.com`
 5. Run `bash deploy.sh` command
 

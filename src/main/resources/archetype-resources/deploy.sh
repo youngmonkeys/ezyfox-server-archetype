@@ -1,7 +1,7 @@
 projectName=${artifactId}
 version=${version}
 # ezyfoxServerLocal=
-# ezyfoxRemote=
+# ezyfoxServerRemote=
 # sshCredential=
 
 echo "start deploy $projectName"
