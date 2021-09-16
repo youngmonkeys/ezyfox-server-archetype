@@ -99,6 +99,15 @@ We've already prepared for you `deploy.sh` file, you just need:
 3. Set `ezyfoxServerRemote` by your `ezyfox-server` folder path on remote
 4. Set `sshCredential` by your ssh credential, i.e `root@your_host.com`
 5. Run `bash deploy.sh` command
+6. After the deployment is done, you need open `settings/ezy-settings.xml` file in `ezyfox-server` on remote and add (if you have already done this step in the past, please skip it):
+
+```xml
+<zone>
+	<name>${artifactId}</name>
+	<config-file>${artifactId}-zone-settings.xml</config-file>
+	<active>true</active>
+</zone>
+```
 
 ${symbol_pound}${symbol_pound} Deploy without ezyfox-server
 
