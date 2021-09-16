@@ -17,6 +17,11 @@
 			<artifactId>ezyfox-server-support</artifactId>
 			<version>${ezy.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-boot-autoconfigure</artifactId>
+			<version>${ezy.boot.version}</version>
+		</dependency>
 	</dependencies>
 	
 </project>
