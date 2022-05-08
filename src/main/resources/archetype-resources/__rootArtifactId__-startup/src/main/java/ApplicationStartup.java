@@ -1,4 +1,12 @@
-package $
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package};
+
+import ${package}.plugin.PluginEntry;
+import ${package}.plugin.PluginEntryLoader;
+import ${package}.app.AppEntry;
+import ${package}.app.AppEntryLoader;
 
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.embedded.EzyEmbeddedServer;
@@ -8,7 +16,7 @@ import com.tvd12.ezyfoxserver.setting.*;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;{package}.app.AppEntryLoader;
+import java.nio.file.Paths;
 
 public class ApplicationStartup {
 

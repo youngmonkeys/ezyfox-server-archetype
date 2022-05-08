@@ -1,8 +1,6 @@
-# set( $symbol_pound = '#' )
-
-# set( $symbol_dollar = '$' )
-
-# set( $symbol_escape = '\' )
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 
 ${symbol_pound} ${artifactId}
 

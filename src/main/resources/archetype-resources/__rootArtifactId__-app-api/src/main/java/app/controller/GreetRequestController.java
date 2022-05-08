@@ -1,3 +1,15 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package}.app.controller;
+
+import ${package}.app.constant.Commands;
+import ${package}.app.constant.Errors;
+import ${package}.app.request.GoRequest;
+import ${package}.app.request.HelloRequest;
+import ${package}.app.response.HelloResponse;
+import ${package}.app.service.GreetingService;
+
 import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
 import com.tvd12.ezyfox.core.annotation.EzyDoHandle;
 import com.tvd12.ezyfox.core.annotation.EzyRequestController;

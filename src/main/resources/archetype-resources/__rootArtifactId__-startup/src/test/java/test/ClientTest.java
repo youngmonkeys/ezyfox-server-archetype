@@ -1,3 +1,11 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package}.test;
+
+import ${package}.ApplicationStartup;
+import ${package}.app.constant.Commands;
+
 import com.tvd12.ezyfox.core.constant.EzyResponseCommands;
 import com.tvd12.ezyfox.entity.EzyArray;
 import com.tvd12.ezyfox.entity.EzyData;

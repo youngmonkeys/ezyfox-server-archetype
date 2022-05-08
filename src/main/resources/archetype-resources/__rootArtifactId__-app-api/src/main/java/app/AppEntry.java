@@ -1,10 +1,17 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package}.app;
+
+import ${package}.common.constant.CommonConstants;
+
 import com.tvd12.ezyfox.bean.EzyBeanContextBuilder;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.context.EzyZoneContext;
 import com.tvd12.ezyfoxserver.setting.EzyAppSetting;
 import com.tvd12.ezyfoxserver.support.entry.EzyDefaultAppEntry;
 
-import java.util.Properties;{package}.common.constant.CommonConstants;
+import java.util.Properties;
 
 public class AppEntry extends EzyDefaultAppEntry {
 

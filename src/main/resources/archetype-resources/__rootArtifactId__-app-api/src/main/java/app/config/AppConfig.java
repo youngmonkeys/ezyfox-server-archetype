@@ -1,3 +1,8 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package}.app.config;
+
 import com.tvd12.ezyfox.bean.annotation.EzyPropertiesBean;
 import lombok.Data;
 
