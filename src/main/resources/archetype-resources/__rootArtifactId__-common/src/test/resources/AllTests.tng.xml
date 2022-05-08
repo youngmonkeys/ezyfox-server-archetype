@@ -6,8 +6,8 @@
 <suite name="All-Test">
 
     <test name="All">
-    	<packages>
-    		<package name="${package}.common.test"/>
-    	</packages>
+        <packages>
+            <package name="${package}.common.test"/>
+        </packages>
     </test>
 </suite>

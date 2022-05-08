@@ -3,17 +3,17 @@
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="${artifactId}" default="install" basedir=".">
-	<property environment="env" />
-	<property name="project.name" value="${symbol_dollar}{ant.project.name}" />
-	<property name="project.version" value="${version}" />
-	<property name="ezyfox.home" value="${symbol_dollar}{env.EZYFOX_SERVER_HOME}" />
-	<property name="ezyfox.home.lib" value="${symbol_dollar}{ezyfox.home}/lib" />
-	<property name="ezyfox.home.common" value="${symbol_dollar}{ezyfox.home}/common" />
-	<property name="ezyfox.home.plugins" value="${symbol_dollar}{ezyfox.home}/plugins" />
-	<property name="ezyfox.home.apps" value="${symbol_dollar}{ezyfox.home}/apps" />
-	<property name="ezyfox.home.apps.common" value="${symbol_dollar}{ezyfox.home}/apps/common" />
-	<property name="ezyfox.home.apps.entries" value="${symbol_dollar}{ezyfox.home}/apps/entries" />
+    <property environment="env"/>
+    <property name="project.name" value="${symbol_dollar}{ant.project.name}"/>
+    <property name="project.version" value="${version}"/>
+    <property name="ezyfox.home" value="${symbol_dollar}{env.EZYFOX_SERVER_HOME}"/>
+    <property name="ezyfox.home.lib" value="${symbol_dollar}{ezyfox.home}/lib"/>
+    <property name="ezyfox.home.common" value="${symbol_dollar}{ezyfox.home}/common"/>
+    <property name="ezyfox.home.plugins" value="${symbol_dollar}{ezyfox.home}/plugins"/>
+    <property name="ezyfox.home.apps" value="${symbol_dollar}{ezyfox.home}/apps"/>
+    <property name="ezyfox.home.apps.common" value="${symbol_dollar}{ezyfox.home}/apps/common"/>
+    <property name="ezyfox.home.apps.entries" value="${symbol_dollar}{ezyfox.home}/apps/entries"/>
 
-	<target name="install">
-	</target>
+    <target name="install">
+    </target>
 </project>

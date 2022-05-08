@@ -3,9 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.app.response;
 
-
 import com.tvd12.ezyfox.binding.annotation.EzyObjectBinding;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -13,7 +11,5 @@ import lombok.Data;
 @AllArgsConstructor
 @EzyObjectBinding
 public class GoResponse {
-
-	private String message; 
-	
+    private String message;
 }

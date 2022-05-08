@@ -4,9 +4,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="AllTests">
-	<test name="All">
-		<packages>
-			<package name="${package}.plugin.test"></package>
-		</packages>
-	</test>
+    <test name="All">
+        <packages>
+            <package name="${package}.plugin.test"></package>
+        </packages>
+    </test>
 </suite>

@@ -5,7 +5,7 @@ package ${package}.common.constant;
 
 public final class CommonConstants {
 
-	public static final String PLUGIN_PROPERTIES = "${package}.PluginProperties";
+    public static final String PLUGIN_PROPERTIES = "${package}.PluginProperties";
 
-	private CommonConstants() {}
+    private CommonConstants() {}
 }
