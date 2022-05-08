@@ -1,14 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
-package ${package}.app.controller;
-
-import ${package}.app.constant.Commands;
-import ${package}.app.constant.Errors;
-import ${package}.app.request.GoRequest;
-import ${package}.app.request.HelloRequest;
-import ${package}.app.response.HelloResponse;
-import ${package}.app.service.GreetingService;
 import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
 import com.tvd12.ezyfox.core.annotation.EzyDoHandle;
 import com.tvd12.ezyfox.core.annotation.EzyRequestController;
@@ -20,33 +9,33 @@ import com.tvd12.ezyfoxserver.support.factory.EzyResponseFactory;
 @EzyRequestController
 public class GreetRequestController {
 
-	@EzyAutoBind
-	private EzyResponseFactory responseFactory;
-	
-	@EzyAutoBind
-	private GreetingService greetingService;
-	
-	@EzyDoHandle(Commands.HELLO)
-	public void sayHello(EzyUser user, HelloRequest request) {
-		if(EzyStrings.isNoContent(request.getNickName())) {
-			throw new EzyBadRequestException(Errors.UNKNOWN, "invalid nick name");
-		}
-		responseFactory.newObjectResponse()
-			.command(Commands.HELLO)
-			.data(new HelloResponse(greetingService.hello(request.getNickName())))
-			.user(user)
-			.execute();
-	}
-	
-	@EzyDoHandle(Commands.GO)
-	public void sayGo(EzyUser user, GoRequest request) {
-		if(EzyStrings.isNoContent(request.getNickName())) {
-			throw new EzyBadRequestException(Errors.UNKNOWN, "invalid nick name");
-		}
-		responseFactory.newObjectResponse()
-		.command(Commands.GO)
-		.data(new HelloResponse(greetingService.go(request.getNickName())))
-		.user(user)
-		.execute();
-	}
+    @EzyAutoBind
+    private EzyResponseFactory responseFactory;
+
+    @EzyAutoBind
+    private GreetingService greetingService;
+
+    @EzyDoHandle(Commands.HELLO)
+    public void sayHello(EzyUser user, HelloRequest request) {
+        if (EzyStrings.isNoContent(request.getNickName())) {
+            throw new EzyBadRequestException(Errors.UNKNOWN, "invalid nick name");
+        }
+        responseFactory.newObjectResponse()
+            .command(Commands.HELLO)
+            .data(new HelloResponse(greetingService.hello(request.getNickName())))
+            .user(user)
+            .execute();
+    }
+
+    @EzyDoHandle(Commands.GO)
+    public void sayGo(EzyUser user, GoRequest request) {
+        if (EzyStrings.isNoContent(request.getNickName())) {
+            throw new EzyBadRequestException(Errors.UNKNOWN, "invalid nick name");
+        }
+        responseFactory.newObjectResponse()
+            .command(Commands.GO)
+            .data(new HelloResponse(greetingService.go(request.getNickName())))
+            .user(user)
+            .execute();
+    }
 }

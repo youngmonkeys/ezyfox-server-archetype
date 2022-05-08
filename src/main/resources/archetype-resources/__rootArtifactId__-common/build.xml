@@ -3,14 +3,14 @@
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="${parentArtifactId}-common" default="install" basedir=".">
-	<import file="../build.xml" />
+    <import file="../build.xml"/>
 
-	<target name="install">
-		<copy todir="${symbol_dollar}{ezyfox.home.common}">
-			<fileset dir="target">
-				<filename name="${symbol_dollar}{project.name}-${symbol_dollar}{project.version}.jar" />
-			</fileset>
-		</copy>
-	</target>
+    <target name="install">
+        <copy todir="${symbol_dollar}{ezyfox.home.common}">
+            <fileset dir="target">
+                <filename name="${symbol_dollar}{project.name}-${symbol_dollar}{project.version}.jar"/>
+            </fileset>
+        </copy>
+    </target>
 
 </project>

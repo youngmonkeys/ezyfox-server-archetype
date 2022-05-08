@@ -1,11 +1,4 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
-package ${package}.app.response;
-
-
 import com.tvd12.ezyfox.binding.annotation.EzyObjectBinding;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -13,7 +6,5 @@ import lombok.Data;
 @AllArgsConstructor
 @EzyObjectBinding
 public class HelloResponse {
-
-	private String message; 
-	
+    private String message;
 }

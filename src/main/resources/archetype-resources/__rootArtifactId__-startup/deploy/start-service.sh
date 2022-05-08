@@ -63,4 +63,3 @@ else
     echo "Another ezyfox server instance is already started in this folder. To start a new instance, please run in a new folder."
     exit 0
 fi
-
