@@ -21,7 +21,7 @@ ${symbol_pound} Description
 6. ${artifactId}-plugin/config/config.properties: plugin's configuration file
 7. ${artifactId}-startup: contains ApplicationStartup class to run on local (you should not add any classes in this
    module)
-8. ${artifactId}-startup/src/main/resources/log4j.properties: log4j configuration file
+8. ${artifactId}-startup/src/main/resources/logback.xml: logback configuration file
 
 ${symbol_pound} How to build?
 
