@@ -131,6 +131,10 @@ On your IDE, you need:
 2. Run `ApplicationStartup` in `src/main/java`
 3. Run `ClientTest` in `src/test/java`
 
+${symbol_pound} How to deploy?
+
+You can take a look this guide: [Deploy EzyFox Server](https://youngmonkeys.org/deploy-ezyfox-server/)
+
 ${symbol_pound} Documentation
 
 You can find a lot of documents on [youngmonkeys.org](https://youngmonkeys.org/ezyfox-sever/)
