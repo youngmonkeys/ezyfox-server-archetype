@@ -135,6 +135,12 @@ ${symbol_pound} How to deploy?
 
 You can take a look this guide: [Deploy EzyFox Server](https://youngmonkeys.org/deploy-ezyfox-server/)
 
+${symbol_pound} How to export external libraries to ezyfox server?
+
+1. Move to `${rootArtifactId}-startup` module 
+2. Run `mvn clean install -Denv.EZYFOX_SERVER_HOME=deploy -Pezyfox-deploy`
+3. Run class `${package}.tools.ExternalLibrariesExporter` in `${rootArtifactId}-startup/src/test/java`
+
 ${symbol_pound} Documentation
 
 You can find a lot of documents on [youngmonkeys.org](https://youngmonkeys.org/ezyfox-sever/)
