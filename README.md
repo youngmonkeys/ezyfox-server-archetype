@@ -10,7 +10,7 @@ and [Create an EzyFox Server Project](https://youngmonkeys.org/create-ezyfox-ser
 ```
 GroupId: com.tvd12
 ArtifactId: ezyfox-server-archetype
-Version: 1.2.6
+Version: 1.2.8
 ```
 
 # Contact us
