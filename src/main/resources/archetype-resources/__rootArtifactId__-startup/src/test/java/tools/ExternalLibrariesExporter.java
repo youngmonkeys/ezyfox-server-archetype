@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.tools;
 
-import static com.tvd12.ezyfox.io.EzyStrings.isEmpty;
+import com.tvd12.ezyfox.collect.Sets;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,20 +12,18 @@ import java.util.Collections;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-import com.tvd12.ezyfox.collect.Sets;
+import static com.tvd12.ezyfox.io.EzyStrings.isEmpty;
 
 public final class ExternalLibrariesExporter {
 
     private static final String EXTENSION_JAR = ".jar";
     private static final String FOLDER_COMMON = "common";
-    private static final Set<String> EXCLUSIVE_LIBRARY_NAMES =
+    private static final Set<String> EXCLUSIVE_LIBRARY_PREFIXES =
         Sets.newHashSet(
-            "${rootArtifactId}-entry",
-            "${rootArtifactId}-plugin",
-            "${rootArtifactId}-api",
-            "${rootArtifactId}-startup",
-            "ezyfox-server-embedded"
+            "ezyfox-server",
+            "${rootArtifactId}"
         );
 
     public static void main(String[] args) throws Exception {
@@ -102,10 +100,12 @@ public final class ExternalLibrariesExporter {
     private static Set<String> listLibraries(
         Path path
     ) throws Exception {
-        return Files.walk(path)
-            .filter(p -> p.toString().endsWith(EXTENSION_JAR))
-            .map(p -> p.getFileName().toString())
-            .collect(Collectors.toSet());
+        try(Stream<Path> stream = Files.walk(path)) {
+            return stream
+                .filter(p -> p.toString().endsWith(EXTENSION_JAR))
+                .map(p -> p.getFileName().toString())
+                .collect(Collectors.toSet());
+        }
     }
 
     private static void exportLibrariesToEzyFox(
@@ -136,8 +136,10 @@ public final class ExternalLibrariesExporter {
             0,
             library.lastIndexOf('-')
         );
-        if (EXCLUSIVE_LIBRARY_NAMES.contains(libraryName)) {
-            return true;
+        for (String exclusiveLibraryPrefix : EXCLUSIVE_LIBRARY_PREFIXES) {
+            if (libraryName.startsWith(exclusiveLibraryPrefix)) {
+                return true;
+            }
         }
         for (String lib : libraries) {
             if (lib.startsWith(libraryName)) {

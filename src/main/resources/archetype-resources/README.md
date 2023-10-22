@@ -41,8 +41,7 @@ ${symbol_pound}${symbol_pound} Run by ezyfox-server
 
 To run by `ezyfox-server` you need to follow by steps:
 
-1. Download [ezyfox-sever](https://youngmonkeys.org/download) (the standard version is for IoT servers and the full version
-   is for normal servers)
+1. Download [ezyfox-sever](https://youngmonkeys.org/download)
 2. Open `build.sh` file and set `EZYFOX_SERVER_HOME` variable, let's say you place `ezyfox-server`
    at `/Programs/ezyfox-server` so `EZYFOX_SERVER_HOME=/Programs/ezyfox-server`
 3. Run `build.sh` file on your terminal
