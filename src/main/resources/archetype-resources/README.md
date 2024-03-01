@@ -37,7 +37,7 @@ ${symbol_pound}${symbol_pound} Run on your IDE
 
 You just move to `${artifactId}-startup` module and run `ApplicationStartup`
 
-${symbol_pound}${symbol_pound} Run by ezyfox-server
+${symbol_pound}${symbol_pound} Run by ezyfox-server portable
 
 To run by `ezyfox-server` you need to follow by steps:
 
@@ -45,7 +45,8 @@ To run by `ezyfox-server` you need to follow by steps:
 2. Open `build.sh` file and set `EZYFOX_SERVER_HOME` variable, let's say you place `ezyfox-server`
    at `/Programs/ezyfox-server` so `EZYFOX_SERVER_HOME=/Programs/ezyfox-server`
 3. Run `build.sh` file on your terminal
-4. Open file `EZYFOX_SERVER_HOME/settings/ezy-settings.xml` and add to `<zones>` tag:
+4. Copy ${artifactId}-zone-settings.xml to EZYFOX_SERVER_HOME/settings/zones folder
+5. Open file `EZYFOX_SERVER_HOME/settings/ezy-settings.xml` and add to `<zones>` tag:
 
 ```xml
 <zone>
@@ -55,14 +56,20 @@ To run by `ezyfox-server` you need to follow by steps:
 </zone>
 ```
 
-5. Run `console.sh` in `EZYFOX_SERVER_HOME` on your terminal, if you want to run `ezyfox-server` in backgroud you will
+6. Run `console.sh` in `EZYFOX_SERVER_HOME` on your terminal, if you want to run `ezyfox-server` in backgroud you will
    need to run `start-server.sh` on your terminal
 
-${symbol_pound}${symbol_pound} Run without ezyfox-server
+If you are using libraries other than those provided by EzyFox Server, you will need to export these libraries to EzyFox Server using the following steps before proceeding to step 6:
 
-To run without `ezyfox-server` you need follow by steps:
+1. Move to `${artifactId}-startup` module
+2. Run `mvn clean install -Denv.EZYFOX_SERVER_HOME=deploy -Pezyfox-deploy`
+3. Run class `${package}.tools.ExternalLibrariesExporter` in `${artifactId}-startup/src/test/java`
 
-1. Run `bash export.sh` command
+${symbol_pound}${symbol_pound}${symbol_pound} Run by ezyfox-server embedded
+
+To run without `ezyfox-server`, you can follow the steps outlined below:
+
+1. Run `bash export.sh` command (or `\\.export.bat` on Windows)
 2. Move to `${artifactId}-startup/deploy` folder
 
 ${symbol_pound}${symbol_pound}${symbol_pound} On Windows
@@ -71,9 +78,9 @@ You just need run `console.bat`
 
 ${symbol_pound}${symbol_pound}${symbol_pound} On Linux
 
-1. To run to debug, you just need run `bash console.sh` on your terminal
-2. To run in background, you just need run `bash start-service.sh` on your terminal
-3. To stop your service, you just need run `bash stop-service.sh` on your terminal
+1. For debugging purposes, run `bash console.sh` in your terminal
+2. To run in background, execute `bash start-service.sh` in your terminal
+3. To stop the service, execute `bash stop-service.sh` in your terminal
 
 ${symbol_pound}${symbol_pound} Run with specific configuration profile
 
@@ -82,7 +89,11 @@ run `ezyfox-server` or your application with a specific profile
 
 ${symbol_pound} How to deploy?
 
-${symbol_pound}${symbol_pound} Deploy mapping
+${symbol_pound}${symbol_pound} Deploy with ezyfox-server portable
+
+You can take a look at this guide: [Deploy EzyFox Server](https://youngmonkeys.org/deploy-ezyfox-server/)
+
+${symbol_pound}${symbol_pound}${symbol_pound} Deploy mapping
 
 Modules which are deployed to ezyfox-server will be mapped as follows::
 
@@ -91,14 +102,14 @@ Modules which are deployed to ezyfox-server will be mapped as follows::
 3. ${artifactId}-common => `ezyfox-server/common/ ${artifactId}-common-${version}.jar`
 4. ${artifactId}-plugin => `ezyfox-server/plugins/${artifactId}-plugin`
 
-${symbol_pound}${symbol_pound} Deploy with tools
+${symbol_pound}${symbol_pound}${symbol_pound} Deploy with tools
 
 You can use bellow tools to copy jar files (follow by above mapping)
 
 1. [filezilla](https://filezilla-project.org/)
 2. [transmit](https://panic.com/transmit/)
 
-${symbol_pound}${symbol_pound} Deploy with scp
+${symbol_pound}${symbol_pound}${symbol_pound} Deploy with scp
 
 We've already prepared for you `deploy.sh` file, you just need:
 
@@ -118,7 +129,7 @@ We've already prepared for you `deploy.sh` file, you just need:
 </zone>
 ```
 
-${symbol_pound}${symbol_pound} Deploy without ezyfox-server
+${symbol_pound}${symbol_pound} Deploy with ezyfox-server embedded
 
 You just need use tool or `scp` to copy `${artifactId}-startup/deploy` to your server
 
@@ -130,23 +141,13 @@ On your IDE, you need:
 2. Run `ApplicationStartup` in `src/main/java`
 3. Run `ClientTest` in `src/test/java`
 
-${symbol_pound} How to deploy?
-
-You can take a look this guide: [Deploy EzyFox Server](https://youngmonkeys.org/deploy-ezyfox-server/)
-
-${symbol_pound} How to export external libraries to ezyfox server?
-
-1. Move to `${rootArtifactId}-startup` module 
-2. Run `mvn clean install -Denv.EZYFOX_SERVER_HOME=deploy -Pezyfox-deploy`
-3. Run class `${package}.tools.ExternalLibrariesExporter` in `${rootArtifactId}-startup/src/test/java`
-
 ${symbol_pound} Documentation
 
 You can find a lot of documents on [youngmonkeys.org](https://youngmonkeys.org/ezyfox-sever/)
 
 ${symbol_pound} Contact us
 
-- Touch us on [Facebook](https://www.facebook.com/youngmonkeys.org)
+- Email us [contact@youngmonkeys.org](contact@youngmonkeys.org)
 - Ask us on [stackask.com](https://stackask.com)
 
 ${symbol_pound} Help us by donation
